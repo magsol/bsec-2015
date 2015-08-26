@@ -2,13 +2,17 @@
 
 This repository contains the pptx slides and IPython Notebook file used to demonstrate basic large-scale image analysis using thunder-python.
 
-If you want to run the IPython notebook, you'll need to install a few prerequisites, as well as perform some setup.
+If you want to simply view the IPython notebook, just check out this repository, make sure you have Jupyter installed, and run the following command:
+
+`jupyter notebook path/to/ipynb_file.ipynb`
+
+If you want to run and **edit** the IPython notebook in a fully interactive way, you'll need to install a few prerequisites, as well as perform some setup.
 
 ## Install Prerequisites
 
  * python 2.7+
  * [jupyter 4.0+](https://jupyter.org/)
- * [Spark 1.4+](http://d3kbcqa49mib13.cloudfront.net/spark-1.4.1-bin-hadoop1.tgz) (built against **Hadoop 1.X**)
+ * [Spark 1.4+](http://d3kbcqa49mib13.cloudfront.net/spark-1.4.1-bin-hadoop1.tgz) (built against **Hadoop 1.X**; thunder is not yet compatible with Hadoop 2.X)
  * [thunder-python 0.5+](http://thunder-project.org/)
  * [awscli](https://aws.amazon.com/cli/)
  
@@ -30,7 +34,7 @@ We use the AWS CLI tool installed earlier to streamline the process of interacti
 
  2. Copy the local image data to the S3 bucket.
 
- `aws s3 cp path/to/image/folder s3://mybucket/path --recursive
+ `aws s3 cp path/to/image/folder s3://mybucket/path --recursive`
 
 If you want to cut down on the verbosity of the `cp` command, you can add the `--only-show-errors` flag, and it will complete silently unless an error is encountered.
 
